@@ -1,3 +1,5 @@
+package string_algos_test;
+
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
