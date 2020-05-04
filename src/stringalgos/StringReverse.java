@@ -1,6 +1,7 @@
 package stringalgos;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  *
@@ -40,6 +41,18 @@ public class StringReverse {
             reverse(str.substring(0, str.length() - 1));
         }
     }
+    
+    public static void reverseString(String str) {
+        String[] sArr = str.split("\\s+");
+        
+        Stack<String> strStack = new Stack<>();
+        for (String s : sArr) {
+            strStack.push(s);
+        }
+        while (!strStack.isEmpty()) {
+            System.err.print(strStack.pop() + " ");
+        }
+    }
 
     public static void main(String[] args) {
         char arr[] = {'s', 'a', 'l', 'a', 'd'};
@@ -51,5 +64,8 @@ public class StringReverse {
         reverse(a);
 
         System.out.println(_reverseString(a));
+        
+        String b = "My name is Khan";
+        reverseString(b);
     }
 }
